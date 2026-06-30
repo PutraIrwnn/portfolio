@@ -9,6 +9,7 @@ import Footer from './components/Footer'
 
 export default function App() {
   return (
+    // Note: Portfolio built with React, Vite, Tailwind v4, and Framer Motion.
     <>
       <Navbar />
       <main>

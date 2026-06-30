@@ -1,0 +1,70 @@
+@import "tailwindcss";
+
+/* ===== Design System Tokens (Tailwind v4 @theme) ===== */
+@theme {
+  --color-white-base: #FAFAFA;
+  --color-space-navy: #0A0F1E;
+  --color-fluid-blue: #7DD3FC;
+  --color-soft-lavender: #C4B5FD;
+  --color-ice-blue: #BAE6FD;
+  --color-purple-accent: #8B5CF6;
+  --color-light-blue-tint: #F0F9FF;
+
+  --font-display: 'Space Grotesk', sans-serif;
+  --font-body: 'Inter', sans-serif;
+}
+
+/* ===== Base Styles ===== */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  color: #1a1a2e;
+  background-color: var(--color-white-base);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.font-display {
+  font-family: var(--font-display);
+}
+
+/* ===== Star Particle Twinkle Animation ===== */
+@keyframes twinkle {
+  0%, 100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.8;
+  }
+}
+
+.animate-twinkle {
+  animation: twinkle 3s ease-in-out infinite;
+}
+
+/* ===== Reduced Motion ===== */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .animate-twinkle {
+    animation: none;
+    opacity: 0.4;
+  }
+
+  .animate-pulse {
+    animation: none;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

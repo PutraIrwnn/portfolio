@@ -1,0 +1,12 @@
+# Konfigurasi CodeRabbit AI
+language: "id-ID" # Mengatur agar CodeRabbit memberikan review dalam bahasa Indonesia
+early_access: false
+
+reviews:
+  profile: "react" # Mengoptimalkan review untuk project React.js
+  request_changes_workflow: false # Tidak akan otomatis menahan merge (hanya mereview)
+  high_level_summary: true # Memberikan rangkuman di setiap Pull Request
+  review_status: true # Menampilkan status review
+  
+chat:
+  auto_reply: true # Memungkinkan Anda membalas komentar AI dan AI akan membalas balik
